@@ -43,7 +43,7 @@ body {
 
 .form-control input {
   width: 100%;
-  max-width: 350px;
+  max-width: 375px;
   padding: 10px;
   font-size: 16px;
   border: none;
@@ -65,4 +65,11 @@ body {
   font-size: 16px;
   color: #fff;
   transition: all 0.5s;
+}
+
+.form-control input:focus ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 12px;
 }
