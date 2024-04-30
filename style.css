@@ -52,3 +52,17 @@ body {
   background: transparent;
   color: #fff;
 }
+
+.form-control input::placeholder {
+  opacity: 0;
+}
+
+.form-control label {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  transition: all 0.5s;
+}
