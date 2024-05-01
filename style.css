@@ -73,3 +73,10 @@ body {
   color: #03e9f4;
   font-size: 12px;
 }
+
+.form-control input:focus::placeholder {
+  font-size: 12px;
+  color: #fff;
+  transition: 0.5s;
+  opacity: 1;
+}
