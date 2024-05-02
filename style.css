@@ -120,3 +120,8 @@ input[type='password'] {
   outline: none;
   cursor: pointer;
 }
+
+.form-control button:hover {
+  width: 100%;
+  transition: 0.4s;
+}
