@@ -20,7 +20,12 @@
         <h1>Login</h1>
 
         <div class="form-control">
-          <input type="text" placeholder="Enter your Email Here" id="email" />
+          <input
+            type="text"
+            placeholder="Enter your Email Here"
+            id="email"
+            onblur="checkFieldEmpty(this)"
+          />
           <label>Email</label>
           <i id="emailError" class="fa fa-envelope"></i>
         </div>
@@ -29,6 +34,7 @@
             type="password"
             placeholder="Enter your password Here"
             id="password"
+            onblur="checkFieldEmpty(this)"
           />
           <label>Passwords</label>
           <i id="passwordError" class="fa fa-lock"></i>
@@ -41,7 +47,7 @@
             <a href="javascript:void(0)">Forget Password?</a>
           </div>
           <div class="form-control">
-            <button id="logIn">Log In</button>
+            <button onclick="doValidate()" id="logIn">Log In</button>
           </div>
         </div>
       </div>
