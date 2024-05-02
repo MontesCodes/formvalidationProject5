@@ -41,7 +41,8 @@ body {
   color: #fff;
 }
 
-.form-control input {
+.form-control input[type='text'],
+input[type='password'] {
   width: 100%;
   max-width: 375px;
   padding: 10px;
@@ -80,3 +81,29 @@ body {
   transition: 0.5s;
   opacity: 1;
 }
+
+.form-control i {
+  position: absolute;
+  right: 5px;
+  bottom: 10px;
+  color: #fff;
+  cursor: help;
+}
+
+.forget {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.forget label {
+  position: unset;
+  cursor: pointer;
+  display: flex;
+  gap: 5px;
+  user-select: none;
+  font-size: 14px;
+}
+
+.form-control;
