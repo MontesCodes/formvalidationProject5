@@ -64,6 +64,12 @@ function doValidate() {
         email.classList.remove('valid');
         password.value = '';
         password.classList.remove('valid');
+
+        logIn.removeAttribute('style');
+
+        setTimeout(() => {
+          logIn.innerHTML = 'Log In';
+        }, 1000);
       }, 1000);
     }, 2000);
   }
