@@ -26,18 +26,35 @@ function checkEmail() {
     emailErr.setAttribute('class', 'fa-regular fa-circle-check');
     emailErr.setAttribute('style', 'color: green');
     email.setAttribute('style', 'border-bottom: 2px solid green');
+    emailErr.removeAttribute('aria-label');
+    return true;
   } else {
     email.setAttribute('style', 'border-bottom: 2px solid red');
+    emailErr.setAttribute('class', 'fa-solid fa-circle-exclamation');
+    emailErr.setAttribute('style', 'color: red');
+    emailErr.setAttribute('aria-label', 'Please enter a valid email address');
+    return false;
   }
 }
 function checkPassword() {
   if (password.value != '') {
     password.setAttribute('style', 'border-bottom: 2px solid green');
+    passErr.setAttribute('class', 'fa-regular fa-circle-check');
+    passErr.setAttribute('style', 'color: green');
+    passErr.removeAttribute('aria-label');
+    return true;
   } else {
     password.setAttribute('style', 'border-bottom: 2px solid red');
+    passErr.setAttribute('class', 'fa-solid fa-circle-exclamation');
+    passErr.setAttribute('style', 'color: red');
+    passErr.setAttribute('aria-label', 'Please enter a valid password');
+    return false;
   }
 }
 function doValidate() {
-  checkEmail();
-  checkPassword();
+  let isLogIn = checkEmail();
+  let isPassword = checkPassword();
+  if (isLogIn && isPassword) {
+    alert('Log in successful');
+  }
 }
