@@ -55,6 +55,16 @@ function doValidate() {
   let isLogIn = checkEmail();
   let isPassword = checkPassword();
   if (isLogIn && isPassword) {
-    alert('Log in successful');
+    logIn.innerHTML = `Authenticating <span class="fa-solid fa-spinner fa-spin fa-xl"></span>`;
+    setTimeout(function () {
+      logIn.innerHTML = `Logged Successfully! &nbsp; <span class="fa-solid fa-check-circle fa-xl"></span>`;
+      logIn.setAttribute('style', 'background-color: green');
+      setTimeout(function () {
+        email.value = '';
+        email.classList.remove('valid');
+        password.value = '';
+        password.classList.remove('valid');
+      }, 1000);
+    }, 2000);
   }
 }
