@@ -23,12 +23,21 @@ function checkFieldEmpty(e) {
 function checkEmail() {
   let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
   if (email.value.match(pattern)) {
+    emailErr.setAttribute('class', 'fa-regular fa-circle-check');
+    emailErr.setAttribute('style', 'color: green');
     email.setAttribute('style', 'border-bottom: 2px solid green');
   } else {
     email.setAttribute('style', 'border-bottom: 2px solid red');
   }
 }
-function checkPassword() {}
+function checkPassword() {
+  if (password.value != '') {
+    password.setAttribute('style', 'border-bottom: 2px solid green');
+  } else {
+    password.setAttribute('style', 'border-bottom: 2px solid red');
+  }
+}
 function doValidate() {
   checkEmail();
+  checkPassword();
 }

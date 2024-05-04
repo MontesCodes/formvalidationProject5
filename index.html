@@ -24,7 +24,7 @@
             type="text"
             placeholder="Enter your Email Here"
             id="email"
-            onblur="checkFieldEmpty(this)"
+            onblur="checkFieldEmpty(this), checkEmail()"
           />
           <label>Email</label>
           <i id="emailError" class="fa fa-envelope"></i>
@@ -34,7 +34,7 @@
             type="password"
             placeholder="Enter your password Here"
             id="password"
-            onblur="checkFieldEmpty(this)"
+            onblur="checkFieldEmpty(this), checkPassword()"
           />
           <label>Passwords</label>
           <i id="passwordError" class="fa fa-lock"></i>
